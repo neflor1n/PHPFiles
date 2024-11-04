@@ -57,4 +57,14 @@ echo $text2;
 //echo trim($text3, "A, a, k..n, w");
 
 
+$massiivitext = 'Taiendav info opilane kohta';
+$sona = str_word_count($massiivitext, 1);
+
+print_r($sona);
+echo "<br>";
+echo "kolmas sona - ".$sona[2];
+echo "<br>";
+echo "1.taht - ".$massiivitext[0];
+echo "<br>";
+
 
