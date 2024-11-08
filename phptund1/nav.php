@@ -1,13 +1,16 @@
 <nav>
     <ul>
         <li>
-            <a href="?">Kodu</a>
+            <a href="?leht=kodu.php">Kodu</a>
         </li>
         <li>
             <a href="?leht=proov.php">Tektsifunktsioonid</a>
         </li>
         <li>
             <a href="?leht=moistatus.php">Mõistatus</a>
+        </li>
+        <li>
+            <a href="?leht=content/moistatus.php">Kontakt</a>
         </li>
     </ul>
 </nav>

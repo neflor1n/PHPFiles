@@ -10,30 +10,31 @@
 <body>
     <header>
         <h1>
-            PHP tunnitööd
+            PHP tunnitööd 
         </h1>
     </header>
     <?php
         include('nav.php');
     ?>
+    
     <section>
         <?php
             if(isset($_GET['leht'])) {
                 include('content/'.$_GET["leht"]);
             }
             else {
-                echo "Tere tulemast!";
+                include('kodu.php');
             }
             
         ?>
     </section>
+
+    <br>
     <br>
 
     <?php
-        echo "Bogdan Sergachev &copy; ";
-        echo date('Y-m-d');
+        include('footer.php');
     ?>
-
 </body>
 
 </html>

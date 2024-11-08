@@ -12,18 +12,18 @@ $text ='Esmaspaev on 4.november';
 echo $text;
 echo "<br>";
 // koik tahed on suured
-echo strtoupper($text);
+echo strtoupper(string: $text);
 echo "<br>";
 // koik tahed on vaiksed
-echo strtolower($text);
+echo strtolower(string: $text);
 echo "<br>";
 // iga sona algab suure tahega
-echo ucwords($text);
+echo ucwords(string: $text);
 echo "<br>";
 // teksti pikkus
-echo "Teksti pikkus - ".strlen($text);
+echo "Teksti pikkus - ".strlen(string: $text);
 echo "<br>";
-echo "Esimesed 9 tahte - ".substr($text, 0, 9);
+echo "Esimesed 9 tahte - ".substr(string: $text, offset: 0, length: 9);
 echo "<br>";
 $otsing = 'on';
 echo "On asukoht lauses on ".strpos($text, $otsing);
@@ -58,7 +58,7 @@ echo $text2;
 
 
 $massiivitext = 'Taiendav info opilane kohta';
-$sona = str_word_count($massiivitext, 1);
+$sona = str_word_count(string: $massiivitext, format: 1);
 
 print_r($sona);
 echo "<br>";

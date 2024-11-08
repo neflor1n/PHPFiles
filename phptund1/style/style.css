@@ -33,11 +33,39 @@ nav ul li a:hover {
 
 
 header {
+    margin: 0;
 	text-align: center;
-	display: block;
-	border-collapse: collapse;
-	background: #2c3e50;
-  color: #fff;
-	font-variant: inherit;
-	padding: 25px;
+    display: block;
+    border-collapse: collapse;
+    background: #2c3e50;
+    color: #fff;
+    font-variant: inherit;
+    padding: 25px;
 } 
+
+section {
+    padding-bottom: -80px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    flex: 1;
+}
+
+
+footer {
+    padding: 20px 0;
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
