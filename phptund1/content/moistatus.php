@@ -53,4 +53,23 @@ $newText3 = implode(' ', $words3);
 echo '<ul>';
 echo '<li style="position: relative; left: 300px;">'.$newText3.'</li>';
 echo '</ul>';
+echo '<br>';
+?>
+<div>
+    <form method="post" action="" style="position: relative; left: 300px;">
+        <label for="guess">Sisesta riigi nimi:</label>
+        <input type="text" name="guess" id="guess" placeholder="Sisesta riigi nimi">
+        <input type="submit" value="Kontrolli">
+    </form>
+</div>
+<?php
 
+if (isset($_POST['guess'])) {
+    $guess = trim($_POST['guess']); 
+    if (strtolower($guess) === strtolower($riik)) {
+        echo "<p style='position: relative; left: 300px;'>Hästi tehtud! Sa arvasid riigi ära: <strong>$riik</strong>.</p>";
+    } else {
+        echo "<p style='position: relative; left: 300px;'>Vale vastus. Mõtle veel kord!</p>";
+    }
+}
+?>

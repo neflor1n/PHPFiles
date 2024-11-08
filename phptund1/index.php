@@ -8,11 +8,11 @@
 </head>
 
 <body>
-    <header>
-        <h1>
-            PHP tunnitööd 
-        </h1>
-    </header>
+
+    <?php
+        include('header.php');
+    ?>
+
     <?php
         include('nav.php');
     ?>
@@ -23,7 +23,7 @@
                 include('content/'.$_GET["leht"]);
             }
             else {
-                include('kodu.php');
+                include('content/kodu.php');
             }
             
         ?>

@@ -12,5 +12,8 @@
         <li>
             <a href="?leht=content/moistatus.php">Kontakt</a>
         </li>
+        <li>
+            <a href="?leht=ajafunktsioonid.php">Ajafunktsioonid</a>
+        </li>
     </ul>
 </nav>
