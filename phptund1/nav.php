@@ -10,10 +10,16 @@
             <a href="?leht=moistatus.php">Mõistatus</a>
         </li>
         <li>
-            <a href="?leht=content/moistatus.php">Kontakt</a>
+            <a href="?leht=moistatus.php">Kontakt</a>
         </li>
         <li>
             <a href="?leht=ajafunktsioonid.php">Ajafunktsioonid</a>
+        </li>
+        <li>
+            <a href="?leht=pildid.php">Pildid</a>
+        </li>
+        <li>
+            <a href="?leht=massiivid.php">Massivid</a>
         </li>
     </ul>
 </nav>
