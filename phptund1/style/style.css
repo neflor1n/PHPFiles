@@ -127,3 +127,8 @@ div#suvaline_pilt img{
 div#suvaline_pilt img:hover{
     transform: scale(1.05);
 }
+
+div#colors,
+div#yl1 {
+    margin: 0 0 0 10px;
+}
