@@ -22,7 +22,7 @@
             <a href="?leht=massiivid.php">Massivid</a>
         </li>
         <li>
-            <a href="?leht=xml/autodXMLfailist.php">Autod</a>
+            <a href="xml/autodXMLfailist.php" target="">Autod</a>
         </li>
     </ul>
 </nav>
