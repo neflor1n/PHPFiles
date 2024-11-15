@@ -183,38 +183,16 @@ function otsingOpilanePerekonnanimi($paring) {
         </form>
 
         <?php
-        if (!empty($_POST['nimi']) && isset($_POST['submit'])) {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['nimi']) && isset($_POST['perekonnanimi']) && isset($_POST['vanus']) && isset($_POST['hobbi']) && isset($_POST['koduleht'])) {
+            $uusnimi = $nimi-> addChild('nimi');
+            $uusperekonnanimi = $opilased -> perekonnanimi-> addChild('perekonnanimi');
+            $uvanus = $opilased -> vanus-> addChild('vanus');
+            $uhobbi = $opilased -> hobbi-> addChild('hobbi');
+            $ukoduleht = $opilased -> koduleht-> addChild('koduleht');
 
+            $opilased-> asXML('rruhm.xml');
+            $opilased = simplexml_load_file("rruhm.xml");
 
-                // Загружаем XML-документ
-                $xmlDoc = new DOMDocument("1.0", "UTF-8");
-                $xmlDoc->preserveWhiteSpace = false;
-                if (@$xmlDoc->load('rruhm.xml')) {
-                    $xmlDoc->formatOutput = true;
-
-                    // Создание нового элемента <opilane> для нового ученика
-                    $xml_opilased = $xmlDoc->createElement("opilane");
-
-                    // Заполнение нового элемента данными из формы
-                    foreach ($_POST as $key => $value) {
-                        if ($key != 'submit' && $key != 'delete') { // Не обрабатывать кнопки
-                            $kirje = $xmlDoc->createElement($key, htmlspecialchars($value)); // Безопасное добавление
-                            $xml_opilased->appendChild($kirje);
-                        }
-                    }
-
-                    // Добавление нового ученика в корневой элемент XML
-                    $xmlDoc->documentElement->appendChild($xml_opilased);
-
-                    // Сохранение изменений в файл
-                    if ($xmlDoc->save('rruhm.xml')) {
-                        echo "<p>Õpilane on edukalt lisatud.</p>";
-                    } else {
-                        echo "<p>Veebileht ei saanud salvestada muudatusi. Palun proovige hiljem.</p>";
-                    }
-                } else {
-                    echo "<p>XML-faili laadimine ebaõnnestus. Palun kontrollige faili.</p>";
-                }
 
             }
 
