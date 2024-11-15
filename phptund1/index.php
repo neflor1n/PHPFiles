@@ -16,7 +16,7 @@
     <?php
         include('nav.php');
     ?>
-    
+
     <section>
         <?php
             if(isset($_GET['leht'])) {

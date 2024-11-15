@@ -21,5 +21,8 @@
         <li>
             <a href="?leht=massiivid.php">Massivid</a>
         </li>
+        <li>
+            <a href="?leht=xml/autodXMLfailist.php">Autod</a>
+        </li>
     </ul>
 </nav>

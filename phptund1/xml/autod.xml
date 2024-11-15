@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autod>
+    <auto>
+        <mark>Mazda</mark>
+        <autoNumber>123ABC</autoNumber>
+        <omanik>Kask</omanik>
+        <v_aasta>2020</v_aasta>
+    </auto>
+    <auto>
+        <mark>BMW</mark>
+        <autoNumber>132CBA</autoNumber>
+        <omanik>Kask</omanik>
+        <v_aasta>2024</v_aasta>
+    </auto>
+    <auto>
+        <mark>Dodge Challenger</mark>
+        <autoNumber>314zda</autoNumber>
+        <omanik>Vsevolod</omanik>
+        <v_aasta>2024</v_aasta>
+    </auto>
+    <auto>
+        <mark>Mitsubishi</mark>
+        <autoNumber>125HJW</autoNumber>
+        <omanik>Sõtsev</omanik>
+        <v_aasta>2012</v_aasta>
+    </auto>
+</autod>

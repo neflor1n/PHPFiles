@@ -1,6 +1,26 @@
-<?php
-echo "<h1 style='text-align: center;'>Mõistatus. Euroopa riik</h1>";
+<style>
+    .taigun {
+        min-width: 17em;
+        padding-left: 15px;
+        padding-right: 15px;
+        border: 2px solid #797676;
+        margin: 3em;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+    }
+    .textt {
+        overflow: 10%;
+        width: 100%;
+    }
+</style>
 
+
+<?php
+echo "<fieldset class='taigun'>";
+echo "<legend class='textt'>";
+echo "<h1 style='text-align: center;'>Mõistatus. Euroopa riik</h1>";
+echo "</legend>";
 $riik = 'Eesti';
 
 // -------------------------------------- E --------------------------------------
@@ -72,4 +92,5 @@ if (isset($_POST['guess'])) {
         echo "<p style='position: relative; left: 300px;'>Vale vastus. Mõtle veel kord!</p>";
     }
 }
+echo "</fieldset>"
 ?>
