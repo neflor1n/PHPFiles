@@ -1,10 +1,12 @@
 <?php
-echo $opilased = simplexml_load_file('rruhm.xml');
+// Загружаем XML файл
+$opilased = simplexml_load_file('rruhm.xml');
+
 function otsingOpilaneNimi($paring) {
     global $opilased;
     $paringVastus = array();
     foreach ($opilased->opilane as $opilane) {
-        // Проведение поиска по имени ученика
+        // Поиск по имени ученика
         if (substr(strtolower($opilane->nimi), 0, strlen($paring)) == strtolower($paring)) {
             array_push($paringVastus, $opilane);
         }
@@ -16,14 +18,13 @@ function otsingOpilanePerekonnanimi($paring) {
     global $opilased;
     $paringVastus = array();
     foreach ($opilased->opilane as $opilane) {
-        // Проведение поиска по имени ученика
+        // Поиск по фамилии ученика
         if (substr(strtolower($opilane->perekonnanimi), 0, strlen($paring)) == strtolower($paring)) {
             array_push($paringVastus, $opilane);
         }
     }
     return $paringVastus;
 }
-
 
 ?>
 
@@ -32,135 +33,15 @@ function otsingOpilanePerekonnanimi($paring) {
 <head>
     <meta charset="UTF-8" >
     <title>TARpv23 rürma</title>
-    <style>
-
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f7fa;
-        }
-
-        #pealkiri {
-            text-align: -webkit-center;
-            margin-top: 20px;
-            color: #2c3e50;
-        }
-
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        th, td {
-            padding: 12px 20px;
-            text-align: -webkit-center;
-            border: 1px solid #ddd;
-        }
-
-        th {
-            background-color: #2c3e50;
-            color: white;
-            font-size: 16px;
-        }
-
-        td {
-            background-color: white;
-            color: #34495e;
-            font-size: 14px;
-        }
-
-        tr:nth-child(even) {
-            background-color: #ecf0f1;
-        }
-
-        tr:hover {
-            background-color: #dfe6e9;
-        }
-
-        /* Формы */
-        form {
-            background-color: #ffffff;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        label {
-            font-size: 14px;
-            margin-bottom: 8px;
-            display: block;
-            color: #2c3e50;
-        }
-
-        input[type="text"] {
-            padding: 10px;
-            width: calc(100% - 20px);
-            border-radius: 4px;
-            border: 1px solid #ddd;
-            font-size: 14px;
-            margin-bottom: 15px;
-        }
-
-        input[type="submit"] {
-            background-color: #3498db;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            font-size: 14px;
-            cursor: pointer;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #2980b9;
-        }
-
-        /* Круги для имен */
-        #opilased {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-
-        #circle {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            background-color: red;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 16px;
-            text-align: -webkit-center;
-            text-decoration: none;
-        }
-        #circle a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        #opilased {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-        .circle:hover {
-            background-color: darkred;
-        }
-    </style>
-
+    <link rel="stylesheet" href="ruhm.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#flip").click(function(){
+                $("#panel").slideToggle("slow");
+            });
+        });
+    </script>
 </head>
 <body>
     <h1 id="pealkiri">TARpv23 rühm</h1>
@@ -180,25 +61,40 @@ function otsingOpilanePerekonnanimi($paring) {
     </div>
     <br>
     <br>
-    <form method="post" action="?">
-        <label for="otsing">Otsing:</label>
-        <input type="text" id="otsing" name="otsing" placeholder="Sisesta nimi">
-        <input type="submit" value="Otsi">
-    </form>
-    <br>
-    <br>
-    <form action="?" method="post">
-        <label for="otsing">Otsing:</label>
-        <input type="text" id="otsing" name="otsing" placeholder="Sisesta perekonnanimi">
-        <input type="submit" value="Otsi"></input>
-    </form>
+    <div id="flip"><strong>Otsi opilased</strong></div>
+    <div id="panel">
+    <!-- Форма для поиска по имени -->
+        <form method="post" action="?">
+            <label for="otsingNimi">Otsing nime järgi:</label>
+            <input type="text" id="otsingNimi" name="otsingNimi" placeholder="Sisesta nimi">
+            <input type="submit" value="Otsi">
+        </form>
 
-    <br>
+        <br>
+
+        <!-- Форма для поиска по фамилии -->
+        <form method="post" action="?">
+            <label for="otsingPerekonnanimi">Otsing perekonnanime järgi:</label>
+            <input type="text" id="otsingPerekonnanimi" name="otsingPerekonnanimi" placeholder="Sisesta perekonnanimi">
+            <input type="submit" value="Otsi">
+        </form>
+    </div>
     <br>
 
     <?php
-        if (!empty($_POST['otsing'])) {
-        $paringVastus = otsingOpilaneNimi($_POST['otsing']);
+    // Обрабатываем поиск по имени и фамилии
+    $paringVastus = array();
+
+    if (!empty($_POST['otsingNimi'])) {
+        // Поиск по имени
+        $paringVastus = otsingOpilaneNimi($_POST['otsingNimi']);
+    } elseif (!empty($_POST['otsingPerekonnanimi'])) {
+        // Поиск по фамилии
+        $paringVastus = otsingOpilanePerekonnanimi($_POST['otsingPerekonnanimi']);
+    }
+
+    // Если найдены пользователи
+    if (count($paringVastus) > 0) {
         echo "<table border='1'>";
         echo "<tr>";
         echo "<th>Nimi</th>";
@@ -209,7 +105,7 @@ function otsingOpilanePerekonnanimi($paring) {
         echo "</tr>";
 
         foreach ($paringVastus as $opilane) {
-            $koduleht = $opilane->koduleht;
+            $koduleht = isset($opilane->koduleht) ? $opilane->koduleht : '';  // Если есть кoдовый сайт
             echo "<tr>";
             echo "<td>" . $opilane->nimi . "</td>";
             echo "<td>" . $opilane->perekonnanimi . "</td>";
@@ -219,35 +115,11 @@ function otsingOpilanePerekonnanimi($paring) {
             echo "</tr>";
         }
         echo "</table>";
+    }
 
-        } else {
+    // Если нет поискового запроса, показываем всех пользователей
+    if (empty($_POST['otsingNimi']) && empty($_POST['otsingPerekonnanimi'])) {
     ?>
-    <?php
-    if (!empty($_POST['otsing'])) {
-        $paringVastus = otsingOpilanePerekonnanimi($_POST['otsing']);
-        echo "<table border='1'>";
-        echo "<tr>";
-        echo "<th>Nimi</th>";
-        echo "<th>Perekonnanimi</th>";
-        echo "<th>Vanus</th>";
-        echo "<th>Hobbi</th>";
-        echo "<th>Koduleht</th>";
-        echo "</tr>";
-
-        foreach ($paringVastus as $opilane) {
-            $koduleht = $opilane->koduleht;
-            echo "<tr>";
-            echo "<td>" . $opilane->nimi . "</td>";
-            echo "<td>" . $opilane->perekonnanimi . "</td>";
-            echo "<td>" . $opilane->vanus . "</td>";
-            echo "<td>" . $opilane->hobbi . "</td>";
-            echo "<td><a href='$koduleht' target='_blank'>Koduleht</a></td>";
-            echo "</tr>";
-        }
-        echo "</table>";
-
-    } else {
-        ?>
     <div id="opilasedTable">
         <table border="1px">
             <tr>
@@ -257,24 +129,27 @@ function otsingOpilanePerekonnanimi($paring) {
                 <th>Hobbi</th>
             </tr>
             <?php
-                foreach ($opilased->opilane as $opilane) {
-                    echo "<tr>";
-                    echo "<td>" . $opilane->nimi . "</td>";
-                    echo "<td>" . $opilane->perekonnanimi . "</td>";
-                    echo "<td>" . $opilane->vanus . "</td>";
-                    echo "<td>" . $opilane->hobbi . "</td>";
-                    echo "</tr>";
-                }
-
-
+            foreach ($opilased->opilane as $opilane) {
+                echo "<tr>";
+                echo "<td>" . $opilane->nimi . "</td>";
+                echo "<td>" . $opilane->perekonnanimi . "</td>";
+                echo "<td>" . $opilane->vanus . "</td>";
+                echo "<td>" . $opilane->hobbi . "</td>";
+                echo "</tr>";
+            }
             ?>
         </table>
+    </div>
+    <?php
+    }
+    ?>
+
+
 
     </div>
-        <?php
-        }
-        }
-    ?>
+
+
+
 
     <div id="salvestamineOpilane">
         <form action="" method="post" name="vorm1">
@@ -300,8 +175,9 @@ function otsingOpilanePerekonnanimi($paring) {
                     <td><input type="text" name="koduleht" id="koduleht" required></td>
                 </tr>
                 <tr>
+                    <td></td>
                     <td><input type="submit" name="submit" id="submit" value="Sisesta"></td>
-                    <td><input type="submit" name="delete" value="Kustuta"></td>
+
                 </tr>
             </table>
         </form>
@@ -350,5 +226,3 @@ function otsingOpilanePerekonnanimi($paring) {
 
 </body>
 </html>
-
-
