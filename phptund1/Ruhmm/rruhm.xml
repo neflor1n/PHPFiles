@@ -6,6 +6,7 @@
     <vanus>17</vanus>
     <hobbi>Aikido, ujumine, programmeerimine</hobbi>
     <koduleht>https://bogdansergachev23.thkit.ee</koduleht>
+    <gender>Male</gender>
   </opilane>
   <opilane>
     <nimi>Vsevolod</nimi>
@@ -13,6 +14,7 @@
     <vanus>17</vanus>
     <hobbi>Programmeerimine</hobbi>
     <koduleht>https://vsevolodtsarev23.thkit.ee</koduleht>
+    <gender>Male</gender>
   </opilane>
   <opilane>
     <nimi>Kirill</nimi>
@@ -20,6 +22,7 @@
     <vanus>17</vanus>
     <hobbi>Korvpall</hobbi>
     <koduleht>https://kirillsats23.thkit.ee</koduleht>
+    <gender>Male</gender>
   </opilane>
   <opilane>
     <nimi>Gleb</nimi>
@@ -27,13 +30,15 @@
     <vanus>17</vanus>
     <hobbi>Korvpall</hobbi>
     <koduleht>https://glebsotsjov23.thkit.ee</koduleht>
+    <gender>Male</gender>
   </opilane>
   <opilane>
     <nimi>Martin</nimi>
     <perekonnanimi>Sild</perekonnanimi>
     <vanus>17</vanus>
-    <hobbi>Kickbox, prorammeerimine</hobbi>
+    <hobbi>Kickbox, programmeerimine</hobbi>
     <koduleht>https://martinsild23.thkit.ee</koduleht>
+    <gender>Male</gender>
   </opilane>
   <opilane>
     <nimi>David</nimi>
@@ -41,6 +46,7 @@
     <vanus>17</vanus>
     <hobbi>Programmeerimine</hobbi>
     <koduleht>https://davidlennuk23.thkit.ee</koduleht>
+    <gender>Male</gender>
   </opilane>
   <opilane>
     <nimi>David</nimi>
@@ -48,6 +54,7 @@
     <vanus>17</vanus>
     <hobbi>Jousaal</hobbi>
     <koduleht>https://davidmyrseth23.thkit.ee</koduleht>
+    <gender>Male</gender>
   </opilane>
   <opilane>
     <nimi>Bogdan</nimi>
@@ -55,13 +62,15 @@
     <vanus>17</vanus>
     <hobbi>Box</hobbi>
     <koduleht>https://bogdanviblyy23.thkit.ee</koduleht>
+    <gender>Male</gender>
   </opilane>
   <opilane>
     <nimi>Marija</nimi>
     <perekonnanimi>Gorbunova</perekonnanimi>
     <vanus>17</vanus>
-    <hobbi>Joonistamine</hobbi>
+    <hobbi>Joonistamine, programmeerimine</hobbi>
     <koduleht>https://marijagorbunova23.thkit.ee</koduleht>
+    <gender>Female</gender>
   </opilane>
   <opilane>
     <nimi>Roman</nimi>
@@ -69,13 +78,15 @@
     <vanus>17</vanus>
     <hobbi>Jousaal</hobbi>
     <koduleht>https://romansandakov23.thkit.ee</koduleht>
+    <gender>Male</gender>
   </opilane>
   <opilane>
     <nimi>Daria</nimi>
     <perekonnanimi>Halchenko</perekonnanimi>
     <vanus>17</vanus>
-    <hobbi>Programmeerimine, joonistamine</hobbi>
+    <hobbi>programmeerimine, joonistamine</hobbi>
     <koduleht>https://dariahalchenko23.thkit.ee</koduleht>
+    <gender>Female</gender>
   </opilane>
   <opilane>
     <nimi>Aleksander</nimi>
@@ -83,6 +94,7 @@
     <vanus>17</vanus>
     <hobbi>Programmeerimine</hobbi>
     <koduleht>https://aleksandermilishenko23.thkit.ee</koduleht>
+    <gender>Male</gender>
   </opilane>
   <opilane>
     <nimi>Valeria</nimi>
@@ -90,6 +102,7 @@
     <vanus>17</vanus>
     <hobbi>Joonistamine, programmeerimine</hobbi>
     <koduleht>https://valeriaallik23.thkit.ee</koduleht>
+    <gender>Female</gender>
   </opilane>
   <opilane>
     <nimi>Jelizaveta</nimi>
@@ -97,6 +110,7 @@
     <vanus>17</vanus>
     <hobbi>Joonistamine, programmeerimine</hobbi>
     <koduleht>https://jelizavetaostapjuk23.thkit.ee</koduleht>
+    <gender>Female</gender>
   </opilane>
   <opilane>
     <nimi>Anton</nimi>
@@ -104,6 +118,7 @@
     <vanus>20</vanus>
     <hobbi>Jalutamine</hobbi>
     <koduleht>https://antonivanov23.thkit.ee</koduleht>
+    <gender>Male</gender>
   </opilane>
   <opilane>
     <nimi>Erik</nimi>
@@ -111,6 +126,7 @@
     <vanus>17</vanus>
     <hobbi>Jousaal</hobbi>
     <koduleht>https://erikgerega23.thkit.ee</koduleht>
+    <gender>Male</gender>
   </opilane>
   <opilane>
     <nimi>Aleksandra</nimi>
@@ -118,6 +134,7 @@
     <vanus>17</vanus>
     <hobbi>Joonistamine</hobbi>
     <koduleht>https://aleksandrasemjonova23.thkit.ee</koduleht>
+    <gender>Female</gender>
   </opilane>
   <opilane>
     <nimi>Timur</nimi>
@@ -125,6 +142,7 @@
     <vanus>20</vanus>
     <hobbi>Box, jalutamine, programmeerimine</hobbi>
     <koduleht>https://timurbashirov23.thkit.ee</koduleht>
+    <gender>Male</gender>
   </opilane>
   <opilane>
     <nimi>Vladislav</nimi>
@@ -132,6 +150,7 @@
     <vanus>17</vanus>
     <hobbi>Programmeerimine</hobbi>
     <koduleht>https://vladislavkudriashev23.thkit.ee</koduleht>
+    <gender>Male</gender>
   </opilane>
   <opilane>
     <nimi>Aleksander<nimi/><nimi/><nimi/><nimi/><nimi/><nimi/></nimi>
@@ -139,12 +158,15 @@
     <vanus>18</vanus>
     <hobbi>Ei ole</hobbi>
     <koduleht>https://aleksandernadvornoi23.thkit.ee</koduleht>
+    <gender>Male</gender>
   </opilane>
-    <opilane>
-        <nimi>John</nimi>
-        <perekonnanimi>Doe</perekonnanimi>
-        <vanus>20</vanus>
-        <hobbi>Reading</hobbi>
-        <koduleht>https://example.com</koduleht>
-    </opilane>
+  <opilane>
+    <nimi>John</nimi>
+    <perekonnanimi>Doe</perekonnanimi>
+    <vanus>20</vanus>
+    <hobbi>Reading</hobbi>
+    <koduleht>https://example.com</koduleht>
+    <gender>Male</gender>
+  </opilane>
+  
 </ruhm>
