@@ -57,11 +57,11 @@
     <koduleht>https://bogdanviblyy23.thkit.ee</koduleht>
   </opilane>
   <opilane>
-    <nimi>Maria</nimi>
+    <nimi>Marija</nimi>
     <perekonnanimi>Gorbunova</perekonnanimi>
     <vanus>17</vanus>
     <hobbi>Joonistamine</hobbi>
-    <koduleht>https://mariagorbunova23.thkit.ee</koduleht>
+    <koduleht>https://marijagorbunova23.thkit.ee</koduleht>
   </opilane>
   <opilane>
     <nimi>Roman</nimi>
@@ -134,10 +134,17 @@
     <koduleht>https://vladislavkudriashev23.thkit.ee</koduleht>
   </opilane>
   <opilane>
-    <nimi>Aleksander</nimi>
+    <nimi>Aleksander<nimi/><nimi/><nimi/><nimi/><nimi/><nimi/></nimi>
     <perekonnanimi>Nadvornoi</perekonnanimi>
     <vanus>18</vanus>
     <hobbi>Ei ole</hobbi>
     <koduleht>https://aleksandernadvornoi23.thkit.ee</koduleht>
   </opilane>
+    <opilane>
+        <nimi>John</nimi>
+        <perekonnanimi>Doe</perekonnanimi>
+        <vanus>20</vanus>
+        <hobbi>Reading</hobbi>
+        <koduleht>https://example.com</koduleht>
+    </opilane>
 </ruhm>
