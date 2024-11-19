@@ -102,7 +102,8 @@ function lisaOpilane($nimi, $perekonnanimi, $vanus, $hobbi, $koduleht, $gender) 
 
     // Проверка возраста
     if ($vanus < 14 || $vanus > 70) {
-        return "Vanus peab olema vahemikus 14 kuni 70!";
+        $message = "Vanus peab olema vahemikus 14 kuni 70!";
+        echo "<script>alert($message);</script>";
     }
 
     // Проверка пола
@@ -193,7 +194,7 @@ function lisaOpilane($nimi, $perekonnanimi, $vanus, $hobbi, $koduleht, $gender) 
 </head>
 <body>
     <h1 id="pealkiri">TARpv23 rühm</h1> <!-- Заголовок страницы -->
-
+        
     <div id="opilased">
         <!-- Перебор учеников и отображение их в виде кругов -->
         <?php
@@ -268,14 +269,18 @@ function lisaOpilane($nimi, $perekonnanimi, $vanus, $hobbi, $koduleht, $gender) 
                         <tr>
                             <td><label for="gender">Opilane gender:</label></td>
                             <td>
+                            <div id="genderradio" style="display: flex;">    
                             <input type="radio" name="gender" id="male" value="Male">
                             <label for="male">Male</label>
+                            
                             <input type="radio" name="gender" id="female" value="Female">
                             <label for="female">Female</label>
+                            </div>
                             </td>
+                            
                         </tr>
                         <tr>
-                            <td colspan="2" style="text-align: center;">
+                            <td colspan="2" style="display: inline-block;">
                                 <input type="submit" name="submit" id="submit" value="Sisesta">
                             </td>
                         </tr>
