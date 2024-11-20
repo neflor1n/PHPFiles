@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif 26;
+    margin: 20px;
+    padding: 0;
+    background-color: #241d33;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+form input, form textarea, form select {
+    display: block;
+    width: 70%;
+    margin: 30px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+form button {
+    padding: 10px;
+    margin: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+    color: white;
+
+}
+
+table th {
+    background-color: 302244;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+#container {
+    background-color: #302244;
+    border: 5px solid transparent;
+    border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+    border-image-slice: 1;
+    height: 400px;
+    margin: 50px auto;
+    width: 70%;
+}

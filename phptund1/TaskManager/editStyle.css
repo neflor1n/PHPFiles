@@ -1,0 +1,31 @@
+h1 {
+    text-align: center;
+    color: #fff;
+}
+
+body {
+    background-color: #241d33;
+  }
+
+form {
+    margin: 20px;
+}
+
+input  {
+    display: block;
+    width: 50%;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+
+#container {
+    background-color: #302244;
+    border: 5px solid transparent;
+    border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+    border-image-slice: 1;
+    height: 400px;
+    margin: 50px auto;
+    width: 50%;
+}
