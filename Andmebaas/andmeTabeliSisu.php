@@ -22,7 +22,6 @@ $paring->execute();
     <body>
         <h1>Loomad andmebaasist</h1>
 
-
         <table>
             <tr>
                 <th>ID</th>
@@ -40,16 +39,12 @@ $paring->execute();
                     }
                     else {
                         echo "<td style='color: $varv;'>". htmlspecialchars($loomanimi). "</td>";
-
                     }
                     echo "<td>". htmlspecialchars($omanik). "</td>";
                     echo "<td>". htmlspecialchars($varv). "</td>";
                     echo "<td><img src='$pilt' alt='pilt' width='150px'></td>";
                     echo "</tr>";
                 }
-
-
-
             ?>
         </table>
     </body>
