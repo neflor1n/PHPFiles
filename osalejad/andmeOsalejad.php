@@ -28,7 +28,7 @@ $paring=$yhendus->prepare("SELECT id, nimi, telefon, pilt, synniaeg FROM osaleja
 $paring->bind_result($id, $nimi, $telefon, $pilt, $synniaeg);
 $paring->execute();
 
-?>
+?>                                  
 
 <!DOCTYPE html>
 <html>
