@@ -1,6 +1,6 @@
 <?php
-require_once("conf.php");
-//require_once("confZone.php");
+//require_once("conf.php");
+require_once("confZone.php");
 
 
 
@@ -17,10 +17,11 @@ $paring->execute();
 <html>
     <head>
         <title>Tabeli sisu mida võetakse andmebaasist</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="bstyle.css">
     </head>
     <body>
         <h1>Loomad andmebaasist</h1>
+
 
         <table>
             <tr>
@@ -39,12 +40,16 @@ $paring->execute();
                     }
                     else {
                         echo "<td style='color: $varv;'>". htmlspecialchars($loomanimi). "</td>";
+
                     }
                     echo "<td>". htmlspecialchars($omanik). "</td>";
                     echo "<td>". htmlspecialchars($varv). "</td>";
                     echo "<td><img src='$pilt' alt='pilt' width='150px'></td>";
                     echo "</tr>";
                 }
+
+
+
             ?>
         </table>
     </body>

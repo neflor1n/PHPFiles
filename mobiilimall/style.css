@@ -1,0 +1,54 @@
+/* Общие стили */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff; /* Светло-голубой фон */
+    color: #333;
+}
+
+/* Заголовок */
+h1 {
+    background-color: #ff6347; /* Помидорный красный */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 2em;
+    margin: 0;
+    background: linear-gradient(45deg, #ff6347, #ff7f50); /* Градиент */
+}
+
+/* Стили для списка */
+ol {
+    padding-left: 20px;
+    list-style-type: decimal;
+    margin: 20px;
+}
+
+li {
+    font-size: 1.2em;
+    color: #555;
+    margin: 10px 0;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Стиль для уведомления, подключаемого через PHP */
+.notification {
+    background-color: #fff8dc; /* Цвет уведомления */
+    padding: 15px;
+    border-left: 5px solid #ff6347; /* Красная полоса слева */
+    margin: 20px;
+    font-size: 1.1em;
+}
+
+/* Мобильные стили */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    li {
+        font-size: 1em;
+    }
+}

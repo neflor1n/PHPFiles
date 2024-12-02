@@ -1,11 +1,23 @@
 <?php
-require_once('conf.php');
+require_once('confZone.php');
 global $yhendus;
 
 if(isset($_REQUEST["kustuta"])) {
     $kask = $yhendus->prepare("delete from osalejad where id = ?");
     $kask->bind_param("i", $_REQUEST["kustuta"]);
     $kask->execute();
+}
+
+
+if (isset($_REQUEST["nimi"]) && isset($_REQUEST["telefon"])
+    && isset($_REQUEST["synniaeg"])
+    && !empty($_REQUEST["synniaeg"])
+    && !empty($_REQUEST["telefon"])
+    && !empty($_REQUEST["nimi"])) {
+
+    $paring = $yhendus->prepare("insert into osalejad(nimi, telefon, pilt,synniaeg) values (?, ?, ?, ?)");
+    $paring->bind_param("ssss", $_REQUEST["nimi"], $_REQUEST["telefon"], $_REQUEST["pilt"], $_REQUEST["synniaeg"]);
+    $paring->execute();
 }
 
 
@@ -29,6 +41,9 @@ $paring->execute();
             <h1>Matkajad</h1>
         </header>
         <main>
+
+
+
             <div id="menu">
                 <table>
                     <?php
@@ -43,6 +58,7 @@ $paring->execute();
             </div>
 
             <div id="sisu">
+
                 <?php
                 if (isset($_REQUEST["osalejad_id"])) {
                     // Новый запрос для конкретного участника
@@ -68,7 +84,24 @@ $paring->execute();
                     $paring->close();
                 }
                 ?>
+
             </div>
+            <form action="?" method="post">
+                <label for="nimi">Nimi</label>
+                <input type="text" id="nimi" name="nimi" placeholder="Nimi">
+
+                <label for="telefon">Telefon</label>
+                <input type="text" id="telefon" name="telefon" placeholder="Näiteks +111111111">
+
+                <label for="pilt">Pilt</label>
+                <textarea name="pilt" id="pilt">Sisesta pildi linki</textarea>
+
+                <label for="synniaeg">Sünniaeg</label>
+                <input type="date" id="synniaeg" name="synniaeg">
+
+                <input type="submit" value="Lisa">
+            </form>
+
         </main>
     </body>
 

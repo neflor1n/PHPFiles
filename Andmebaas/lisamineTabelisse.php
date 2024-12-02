@@ -1,6 +1,6 @@
 <?php
-require_once("conf.php");
-//require_once("confZone.php");
+//require_once("conf.php");
+require_once("confZone.php");
 global $yhendus;
 //kustutamine
 if (isset($_REQUEST["kustuta"])) {
@@ -31,7 +31,7 @@ $paring->execute();
     <html>
     <head>
         <title>Tabeli sisu mida võetakse andmebaasist</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="bstyle.css">
     </head>
     <body>
     <h1>Loomad andmebaasist</h1>

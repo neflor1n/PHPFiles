@@ -84,3 +84,26 @@ main {
 .delete-btn:hover {
     background: #c0392b;
 }
+
+
+form {
+    margin-bottom: 10px;
+}
+
+form {
+    margin: 10px auto;
+}
+
+form input, form textarea{
+    display: block;
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+form input[varv] {
+    margin-top: 10px;
+}
+form button {
+    padding: 10px;
+    margin: 10px;
+}
