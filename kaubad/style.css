@@ -1,0 +1,193 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+
+h2 {
+    text-align: -webkit-center;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+header p {
+    font-size: 18px;
+    color: #7f8c8d;
+}
+
+/* Форма поиска */
+.search-bar-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.search-bar {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 42%;
+}
+
+.search-bar input[type="text"] {
+    width: 250px;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    margin-right: 10px;
+}
+
+.search-bar input[type="submit"] {
+    padding: 12px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.search-bar input[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+/* Стили таблицы */
+.products-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.products-table th, .products-table td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.products-table th {
+    background-color: #3498db;
+    color: #ffffff;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.products-table th:hover {
+    color: #f39c12;
+}
+
+.products-table tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.products-table tr:hover {
+    background-color: #ffffff;
+}
+
+.products-table a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.products-table a:hover {
+    text-decoration: underline;
+}
+
+#uuenda, #kustuta {
+    color: #3498db
+}
+
+
+/* Формы добавления товара/группы */
+.form {
+    margin-top: 40px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #2c3e50;
+    margin-left: 20px;
+}
+
+.form-group input[type="text"], .form-group select {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    width: 98.66%;
+    background-color: #f9f9f9;
+}
+
+.form-group input[type="text"]:focus, .form-group select:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.button {
+    padding: 12px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #2980b9;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .search-bar input[type="text"] {
+        width: 200px;
+    }
+
+    .products-table th, .products-table td {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+}

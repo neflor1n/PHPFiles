@@ -1,5 +1,5 @@
 <?php
-require_once("conf.php");
+require_once("confZone.php");
 global $yhendus;
 
 if (isset($_REQUEST["login"])) {
@@ -18,7 +18,7 @@ $paring->execute();
 <!DOCTYPE html>
 <html lang="et">
 <head>
-    <title>Login</title>
+    <title>Login admin lehel</title>
     <link rel="stylesheet" href="loginStyle.css">
 </head>
 <body>

@@ -1,5 +1,5 @@
 <?php
-require_once ("conf.php");
+require_once("confZone.php");
 global $yhendus;
 
 //lisamine
@@ -67,8 +67,8 @@ if(isset($_REQUEST["kustuta"])) {
 
 
 
-$paring = $yhendus ->prepare("select Id, KonkursiNimi, LisamisAeg, Kommentaatid, Punktid, Avalik from konkurss");
-$paring -> bind_result($id, $konkursiNimi, $lisaminsAeg, $kommentaatid, $punktid, $avalik);
+$paring = $yhendus ->prepare("select Id, KonkursiNimi, LisamisAeg, Kommentaatid, Punktid, pilt, Avalik from konkurss");
+$paring -> bind_result($id, $konkursiNimi, $lisaminsAeg, $kommentaatid, $punktid, $pilt, $avalik);
 $paring -> execute();
 ?>
 
@@ -87,6 +87,8 @@ $paring -> execute();
             <ul>
                 <li><a href="login.php">Admin</a></li>
                 <li><a href="KasutajaKonkurs.php">Kasutaja</a></li>
+                <li><a href="details.php">Info</a></li>
+
             </ul>
         </nav>
 
@@ -102,32 +104,43 @@ $paring -> execute();
             <tr>
                 <th>KonkursiNimi</th>
                 <th>LisamisAeg</th>
+                <th>Pilt</th>
                 <th>Punktid</th>
                 <th colspan="2">Kommentaarid</th>
+
                 <th colspan=4>Haldus</th>
             </tr>
 
 
 
             <?php
+            $paring->free_result();
+            $paring = $yhendus ->prepare("select Id, KonkursiNimi, LisamisAeg, pilt, Kommentaatid, Punktid, Avalik from konkurss where Avalik=1");
+
+            $paring->bind_result($id, $konkursiNimi, $lisaminsAeg, $pilt,$kommentaarid, $punktid, $avalik);
+            $paring-> execute();
                 while($paring -> fetch()){
                     echo "<tr>";
                     echo "<td>".htmlspecialchars($konkursiNimi)."</td>";
                     echo "<td>".htmlspecialchars($lisaminsAeg)."</td>";
+                    echo "<td width='100px'><img src='$pilt' alt='pilt'></td>";
                     echo "<td>".htmlspecialchars($punktid)."</td>";
-                    echo "<td>".nl2br(htmlspecialchars($kommentaatid))."</td>";
-                    ?>
-                    <td>
-                        <form action="?">
-                            <input type="hidden" name="uusKomment" value="<?= $id ?>">
-                            <input type="text" name="komment" id="komment">
-                            <input type="submit" value="Lisa kommentaar">
-                        </form>
-                    </td>
-                    <?php
+
+                    $kommentaaririd = explode("\n", $kommentaarid);
+                    echo "<td>";
+                    foreach ($kommentaaririd as $index => $kommentaar) {
+                        // Для каждого комментария добавляем текст и кнопку удаления
+                        echo htmlspecialchars($kommentaar) . " <br>";
+                    }
+                    echo "</td>";
+
+                    echo "<td><form action='?'>
+                            <input type='hidden' name='uusKomment' value='$id'>
+                            <input type='text' name='komment' id='komment'>
+                            <input type='submit' value='Lisa uus kommentaar'>
+                          </form></td>";
                     echo "<td><a href='?heakonkurss_id=$id'><i class='fa-solid fa-plus'></i> Punkt</a></td>";
                     echo "<td><a href='?halbkonkurss_id=$id'><i class='fa-solid fa-minus'></i> Punkt</a></th>";
-                    echo "<td><a href='?kustuta=$id'><i class='fa-regular fa-trash-can'></i></a>";
                     echo "</tr>";
 
 

@@ -39,5 +39,8 @@
         <li>
             <a href="mobiilimall/ulessane3/index.php" targer="_blank">NaljadAB</a>
         </li>
+        <li>
+            <a href= "Andmebaas/konkurss/konkurssPunktideLisamine.php" targer="_blank">Konkurss</a>
+        </li>
     </ul>
 </nav>
